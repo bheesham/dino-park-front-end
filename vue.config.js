@@ -15,6 +15,21 @@ module.exports = {
   filenameHashing: true,
   publicPath: BASE_URL,
   chainWebpack: (config) => {
+    config.resolve.alias.set('vue', '@vue/compat')
+    const vueRule = config.module.rule('vue');
+    vueRule
+      .use('vue-loader')
+      .tap((options) => {
+        return {
+          ...options,
+          compilerOptions: {
+            compatConfig: {
+              MODE: 2
+            },
+          },
+        };
+      })
+      .end();
     const svgRule = config.module.rule('svg');
     svgRule
       .use('image-webpack-loader')
