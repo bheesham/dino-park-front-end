@@ -44,12 +44,18 @@ export default {
     label: String,
     action: String,
     choices: Array,
-    value: String,
+    modelValue: String,
     name: String,
     icon: String,
     iconOnly: {
       type: Boolean,
       default: false,
+    },
+  },
+  emits: ['update:modelValue'],
+  methods: {
+    changeValue(value) {
+      this.$emit('update:modelValue', value);
     },
   },
   components: {
