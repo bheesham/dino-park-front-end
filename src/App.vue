@@ -111,8 +111,7 @@ body {
   background: var(--gray-20);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  font-size: 87.5%;
-  letter-spacing: 0.04em;
+  font-size: 14px;
   height: 100vh;
   height: -webkit-fill-available;
   min-height: 50em;
