@@ -7,7 +7,7 @@ A front-end for the repositioned Mozillians, to display, edit and search for peo
 To install all resources for this project, please make sure to have [Node](https://nodejs.org/) installed, then run:
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 This will install the dependencies the project requires. Then run:

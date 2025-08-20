@@ -4,7 +4,7 @@ FROM node:latest as build-stage
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 COPY . .
 ARG baseurl=/
 ENV DP_BASE_URL=$baseurl
