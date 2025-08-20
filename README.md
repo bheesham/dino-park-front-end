@@ -28,6 +28,16 @@ export DP_K8S=[url goes here]
 
 Unit tests are in the `tests` folder and ran with Jest.
 
+It's expected that some tests fail. Currently, the summary is:
+
+```
+Test Suites: 19 failed, 10 passed, 29 total
+Tests:       7 failed, 39 passed, 46 total
+Snapshots:   0 total
+Time:        1.325s, estimated 2s
+Ran all test suites.
+```
+
 ## App-wide patterns
 
 ### Apollo/GraphQL
@@ -97,4 +107,29 @@ Features:
 - We make sure components look good (not necessarily the same) in the devices, browsers, platforms our users use.
 
 ### Deploying
-This application will automatically deploy to test/dev from the `master` branch. To deploy to `prod` cut a release tag following the pattern in `releases` with the suffix `-prod`.
+
+This application must be manually deployed, until we migrate our builds to
+GitHub Actions.
+
+To deploy to the development and staging clusters, run:
+
+```
+AWS_PROFILE=iam-admin aws codebuild start-build \
+    --project-name dino-park-front-end \
+    --environment-variables-override 'name=MANUAL_DEPLOY_TRIGGER,value=branch/master'
+```
+
+To deploy to the production environment, first cut a release (or tag) in the
+form:
+
+```
+<MAJOR>.<MINOR>.<PATCH>-prod
+```
+
+Then run:
+
+```
+AWS_PROFILE=iam-admin aws codebuild start-build \
+    --project-name dino-park-front-end \
+    --environment-variables-override 'name=MANUAL_DEPLOY_TRIGGER,value=tag/<MAJOR>.<MINOR>.<PATCH>-prod'
+```
