@@ -4,7 +4,7 @@ variable "project_name" {
 }
 
 variable "github_repo" {
-  default = "https://github.com/mozilla-iam/dino-park-front-end"
+  default = "https://github.com/mozilla-iam/dino-park-front-end.git"
 }
 
 variable "buildspec_file" {
