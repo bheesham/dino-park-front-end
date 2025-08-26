@@ -29,18 +29,6 @@ resource "aws_codebuild_project" "build" {
       name  = "DOCKER_REPO"
       value = aws_ecr_repository.registry.repository_url
     }
-
-    environment_variable {
-      name  = "DOCKERHUB_USERNAME"
-      type  = "SECRETS_MANAGER"
-      value = "/CodeBuild/dockerhub:username"
-    }
-
-    environment_variable {
-      name  = "DOCKERHUB_PASSWORD"
-      type  = "SECRETS_MANAGER"
-      value = "/CodeBuild/dockerhub:password"
-    }
   }
 
   source {
