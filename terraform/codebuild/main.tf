@@ -29,18 +29,6 @@ resource "aws_codebuild_project" "build" {
       name  = "DOCKER_REPO"
       value = aws_ecr_repository.registry.repository_url
     }
-
-    environment_variable {
-      name  = "DOCKERHUB_USERNAME"
-      type  = "SECRETS_MANAGER"
-      value = "/CodeBuild/dockerhub:username"
-    }
-
-    environment_variable {
-      name  = "DOCKERHUB_PASSWORD"
-      type  = "SECRETS_MANAGER"
-      value = "/CodeBuild/dockerhub:password"
-    }
   }
 
   source {
@@ -52,22 +40,6 @@ resource "aws_codebuild_project" "build" {
 
   tags = {
     "App" = var.project_name
-  }
-}
-
-# Unomment this section if you do want to build automatically on push
-resource "aws_codebuild_webhook" "webhook" {
-  project_name = aws_codebuild_project.build.name
-  filter_group {
-    filter {
-      type    = "EVENT"
-      pattern = "PUSH"
-    }
-
-    filter {
-      type    = "HEAD_REF"
-      pattern = "(^refs/heads/master$|^refs/tags/.*-(prod|test))"
-    }
   }
 }
 

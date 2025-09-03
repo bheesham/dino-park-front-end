@@ -7,12 +7,17 @@ provider "aws" {
 }
 
 terraform {
-  required_version = "~> 0.12"
-
+  required_version = ">= 1.5.0"
   backend "s3" {
     bucket = "eks-terraform-shared-state"
     key    = "global/codebuild/dino-park-front-end/terraform.tfstate"
     region = "us-west-2"
+  }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
   }
 }
 
