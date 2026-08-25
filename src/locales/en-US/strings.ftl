@@ -146,6 +146,8 @@ orgchart_full-profile = View full profile
 
 profile = Profile
 
+profile_error_login_required = You must be logged into view this profile.
+
 profile_preview = Preview As
 profile_preview_active = Previewing profile as
 profile_preview_myself = Myself
