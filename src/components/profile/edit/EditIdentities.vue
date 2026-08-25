@@ -111,12 +111,12 @@
 
 <script>
 import Button from '@/components/ui/Button.vue';
-import EditMutationWrapper from './EditMutationWrapper.vue';
 import Icon from '@/components/ui/Icon.vue';
 import Identities from '@/assets/js/identities';
 import PrivacySetting from '@/components/profile/PrivacySetting.vue';
 import Select from '@/components/ui/Select.vue';
 import Tooltip from '@/components/ui/Tooltip.vue';
+import EditMutationWrapper from './EditMutationWrapper.vue';
 
 export default {
   props: {

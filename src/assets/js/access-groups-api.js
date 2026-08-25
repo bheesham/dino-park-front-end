@@ -82,7 +82,7 @@ export class Api {
         throw new Error('unmapped path executed');
       }
       // Hold onto the original method for mapping use
-      let mappedMethod = restMethod;
+      const mappedMethod = restMethod;
 
       // If the map method is not named as a REST method, the optional method 3rd argument in the REST getter will contain a REST method
       if (!['get', 'post', 'delete', 'put'].includes(mappedMethod)) {

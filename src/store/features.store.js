@@ -1,4 +1,5 @@
 import Features from '@/assets/js/features';
+
 const features = new Features();
 
 export default {
@@ -18,7 +19,7 @@ export default {
   },
   mutations: {
     set(state, features) {
-      for (let k in features) {
+      for (const k in features) {
         if (!features.hasOwnProperty(k)) {
           continue;
         }
@@ -27,7 +28,7 @@ export default {
     },
   },
   getters: {
-    get: state => feature => {
+    get: (state) => (feature) => {
       if (feature in state) {
         return state[feature];
       }

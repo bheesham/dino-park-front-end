@@ -294,7 +294,7 @@ export default {
   data() {
     const accessGroupExpiration = this.groupInformation.group.expiration || 0;
     // TODO: Figure out what this value does and delete it if unnecessary
-    let selectedExpiration =
+    const selectedExpiration =
       accessGroupExpiration === MEMBER_EXPIRATION_ONE_YEAR ||
       accessGroupExpiration === MEMBER_EXPIRATION_TWO_YEARS ||
       accessGroupExpiration === MEMBER_EXPIRATION_NONE
@@ -518,8 +518,8 @@ export default {
           endpointArguments: [
             search,
             this.groupName,
-            /* includeCurators =*/ true,
-            /* showExistingMembers =*/ false,
+            /* includeCurators = */ true,
+            /* showExistingMembers = */ false,
           ],
         })
         .then((users) => users.map((user) => new DisplayMemberViewModel(user)));

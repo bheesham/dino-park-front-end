@@ -104,7 +104,7 @@ export default {
         264: 528,
       };
 
-      let doubleSized = SRC_SIZE_TO_2X_SIZE[this.slot];
+      const doubleSized = SRC_SIZE_TO_2X_SIZE[this.slot];
 
       // possible when the :size prop gets set to other values
       // where we don't have a bigger picture (e.g. 528)

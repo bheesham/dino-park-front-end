@@ -85,7 +85,7 @@ const Combobox = ({
                 let src = '""';
                 // check whether we are dealing with a user (which are displayed a little bit different)
                 if (displayUser) {
-                  const picture = item.picture;
+                  const { picture } = item;
                   if (
                     picture === null ||
                     picture === '' ||
@@ -95,7 +95,7 @@ const Combobox = ({
                     generateIdenticon(item.username, 40).then((src) => {
                       // small delay to make sure that the image is actually in the dom
                       setTimeout(() => {
-                        let div = document.querySelector(
+                        const div = document.querySelector(
                           `div[data-uuid="${item.uuid}"]`,
                         );
 

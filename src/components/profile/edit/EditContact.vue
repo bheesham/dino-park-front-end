@@ -184,13 +184,13 @@
 import Checkbox from '@/components/ui/Checkbox.vue';
 import PhoneNumbersMixin from '@/components/_mixins/PhoneNumbersMixin.vue';
 import Button from '@/components/ui/Button.vue';
-import EditMutationWrapper from './EditMutationWrapper.vue';
 import PrivacySetting from '@/components/profile/PrivacySetting.vue';
 import Icon from '@/components/ui/Icon.vue';
 import Select from '@/components/ui/Select.vue';
 import { DISPLAY_LEVELS } from '@/assets/js/display-levels';
 import Tooltip from '@/components/ui/Tooltip.vue';
 import LinksMixin from '@/components/_mixins/LinksMixin.vue';
+import EditMutationWrapper from './EditMutationWrapper.vue';
 
 const EMPTY_SECONDARY_EMAIL = {
   value: '',
