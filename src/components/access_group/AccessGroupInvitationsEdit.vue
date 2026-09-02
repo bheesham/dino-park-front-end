@@ -324,7 +324,7 @@ export default {
       return data.role !== null;
     },
     async fetchGroupInvitations() {
-      let data = await this.accessGroupApi.execute({
+      const data = await this.accessGroupApi.execute({
         path: 'groupInvitations/get',
         endpointArguments: [this.groupInformation.group.name],
       });

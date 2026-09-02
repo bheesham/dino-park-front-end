@@ -239,15 +239,15 @@
 <script>
 import EditButton from '@/components/ui/EditButton.vue';
 import AccountsMixin from '@/components/_mixins/AccountsMixin.vue';
+import EditPersonalInfo from '@/components/profile/edit/EditPersonalInfo.vue';
+import Identities from '@/assets/js/identities';
 import EditAccessGroups from './edit/EditAccessGroups.vue';
 import EditAccounts from './edit/EditAccounts.vue';
 import EditContact from './edit/EditContact.vue';
 import EditKeys from './edit/EditKeys.vue';
 import EditLanguages from './edit/EditLanguages.vue';
 import EditIdentities from './edit/EditIdentities.vue';
-import EditPersonalInfo from '@/components/profile/edit/EditPersonalInfo.vue';
 import EditTags from './edit/EditTags.vue';
-import Identities from '@/assets/js/identities';
 import ProfileNav from './ProfileNav.vue';
 import ProfileSection from './ProfileSection.vue';
 import ViewAccessGroups from './view/ViewAccessGroups.vue';

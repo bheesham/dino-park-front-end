@@ -442,9 +442,9 @@ import TextInput from '@/components/ui/TextInput.vue';
 import TextArea from '@/components/ui/TextArea.vue';
 import Tooltip from '@/components/ui/Tooltip.vue';
 import UserPicture from '@/components/ui/UserPicture.vue';
-import EditPictureModal from './EditPictureModal.vue';
 import Fetcher from '@/assets/js/fetcher';
 import LinksMixin from '@/components/_mixins/LinksMixin.vue';
+import EditPictureModal from './EditPictureModal.vue';
 
 const fetcher = new Fetcher();
 

@@ -1,6 +1,7 @@
 import Vuex from 'vuex';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import MockStore from '../mocks/mockStore';
+
 const localVue = createLocalVue();
 
 localVue.use(Vuex);

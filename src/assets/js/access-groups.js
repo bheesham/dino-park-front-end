@@ -416,7 +416,7 @@ export default class AccessGroups {
   ) {
     try {
       const api = new Api();
-      let users = await api.execute({
+      const users = await api.execute({
         path: 'users/get',
         endpointArguments: [q, groupName, includeCurators, showExisting],
       });

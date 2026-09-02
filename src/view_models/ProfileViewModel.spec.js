@@ -1,4 +1,5 @@
 import { ProfileViewModel } from './ProfileViewModel';
+
 const mockProfile = {
   uuid: '',
   alternativeName: '',

@@ -85,7 +85,6 @@
 </template>
 
 <script>
-import EditMutationWrapper from './EditMutationWrapper.vue';
 import ExternalLink from '@/components/ui/ExternalLink.vue';
 import Icon from '@/components/ui/Icon.vue';
 import IconBlock from '@/components/ui/IconBlock.vue';
@@ -93,6 +92,7 @@ import IconBlockList from '@/components/ui/IconBlockList.vue';
 import PrivacySetting from '@/components/profile/PrivacySetting.vue';
 import { DISPLAY_LEVELS } from '@/assets/js/display-levels';
 import Tooltip from '@/components/ui/Tooltip.vue';
+import EditMutationWrapper from './EditMutationWrapper.vue';
 
 export default {
   name: 'EditAccessGroups',

@@ -55,7 +55,7 @@ export default {
       if (this.viewAs) {
         this.$router.push({ query: { pa: this.viewAs } });
       } else {
-        const rQuery = Object.assign({}, this.$route.query);
+        const rQuery = { ...this.$route.query };
         if ('pa' in rQuery) {
           delete rQuery.pa;
         }

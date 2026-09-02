@@ -6,6 +6,8 @@
     "serve": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",
+    "lint:i18n": "i18n-lint -t '{{,}}' \"src/**/*.vue\"",
+    "lint:quick": "pretty-quick --staged",
     "test:unit": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service test:unit --verbose",
     "inspect": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service inspect"
   },
@@ -72,5 +74,8 @@
   ],
   "resolutions": {
     "event-stream": "3.3.4"
+  },
+  "engines": {
+    "node": ">=23.0.0 <24.0.0"
   }
 }

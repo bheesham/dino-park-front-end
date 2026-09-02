@@ -1,8 +1,9 @@
 import Vue from 'vue';
-import Modal from './Modal.vue';
 import getRenderedText from '@/../tests/utils/getRenderedText.js';
+import Modal from './Modal.vue';
 import MockStore from '../../../tests/mocks/mockStore';
 import getMountedComponentWithStore from '../../../tests/utils/getMountedComponentWithStore';
+
 describe('Modal', () => {
   const Constructor = Vue.extend(Modal);
 
@@ -24,7 +25,7 @@ describe('Modal', () => {
     const text = getRenderedText(
       Modal,
       { heading: msg },
-      '.modal__header > h1'
+      '.modal__header > h1',
     );
     expect(text).toEqual(msg);
   });

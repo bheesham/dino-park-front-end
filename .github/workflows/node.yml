@@ -1,0 +1,21 @@
+name: Node
+
+on:
+  push:
+    branches:
+  pull_request:
+    branches:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+      - run: npm i --legacy-peer-deps
+      - run: npm run lint
+        continue-on-error: true
+      - run: npm run lint:i18n
+      - run: npm run lint:quick
+      - run: npm run test:unit
+        continue-on-error: true

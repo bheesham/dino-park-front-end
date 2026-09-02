@@ -59,11 +59,11 @@
         v-model="uris.values[index].v"
         :placeholder="
           EXTERNAL_ACCOUNTS[destructUriKey(k).name].placeholder ||
-            `Your username on ${EXTERNAL_ACCOUNTS[destructUriKey(k).name].text}`
+          `Your username on ${EXTERNAL_ACCOUNTS[destructUriKey(k).name].text}`
         "
       />
       <Checkbox
-        @input="newValue => toggleUriContactMe(newValue, index)"
+        @input="(newValue) => toggleUriContactMe(newValue, index)"
         :checked="destructUriKey(k).contact"
         :label="fluent('profile_contact-me', 'show-in')"
         class="edit-contact__set-as-contact"
@@ -90,8 +90,8 @@ import Icon from '@/components/ui/Icon.vue';
 import PrivacySetting from '@/components/profile/PrivacySetting.vue';
 import Select from '@/components/ui/Select.vue';
 import { DISPLAY_LEVELS } from '@/assets/js/display-levels';
-import EditMutationWrapper from './EditMutationWrapper.vue';
 import Tooltip from '@/components/ui/Tooltip.vue';
+import EditMutationWrapper from './EditMutationWrapper.vue';
 
 export default {
   name: 'EditAccounts',
@@ -147,11 +147,11 @@ export default {
   computed: {
     remainingAccounts() {
       const selectedUris = this.uris.values.map(
-        ({ k }) => this.destructUriKey(k).name
+        ({ k }) => this.destructUriKey(k).name,
       );
       return this.availableAccounts
-        .filter(account => !selectedUris.includes(account))
-        .map(account => {
+        .filter((account) => !selectedUris.includes(account))
+        .map((account) => {
           const label = this.EXTERNAL_ACCOUNTS[account].text;
           return { label, value: this.constructUriKey({ name: account }) };
         });

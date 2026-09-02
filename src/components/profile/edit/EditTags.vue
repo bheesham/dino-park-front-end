@@ -68,8 +68,8 @@ import Icon from '@/components/ui/Icon.vue';
 import PrivacySetting from '@/components/profile/PrivacySetting.vue';
 import Tag from '@/components/ui/Tag.vue';
 import { DISPLAY_LEVELS } from '@/assets/js/display-levels';
-import EditMutationWrapper from './EditMutationWrapper.vue';
 import Tooltip from '@/components/ui/Tooltip.vue';
+import EditMutationWrapper from './EditMutationWrapper.vue';
 
 export default {
   name: 'EditTags',
@@ -122,13 +122,13 @@ export default {
     },
     handlePaste() {
       this.$nextTick(() => {
-        let text = this.$refs.inputTag.value;
+        const text = this.$refs.inputTag.value;
 
         if (text === '' || !text.includes(',')) {
           return;
         }
 
-        for (let tag of text.split(',')) {
+        for (const tag of text.split(',')) {
           this.addTag(tag.trim());
         }
       });

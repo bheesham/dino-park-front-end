@@ -61,7 +61,7 @@ export default {
     accessInformation: Object,
     labelType: String,
   },
-  data: function () {
+  data() {
     return {
       slackLabel: 'Slack',
     };
@@ -73,7 +73,8 @@ export default {
       }
       if (
         'nda' in (this.accessInformation.mozilliansorg.values || {}) ||
-        'ghe_group_curators' in (this.accessInformation.mozilliansorg.values || {}) ||
+        'ghe_group_curators' in
+          (this.accessInformation.mozilliansorg.values || {}) ||
         'contingentworkernda' in
           (this.accessInformation.mozilliansorg.values || {})
       ) {

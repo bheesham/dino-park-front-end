@@ -1,6 +1,6 @@
-import Tag from './Tag.vue';
 import { createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
+import Tag from './Tag.vue';
 import getRenderedText from '../../../tests/utils/getRenderedText.js';
 
 const localVue = createLocalVue();
@@ -17,7 +17,7 @@ describe('Tag.vue', () => {
     const vis = getRenderedText(
       Tag,
       { tag: 'test', removable: true },
-      '.visually-hidden'
+      '.visually-hidden',
     );
     expect(vis).toBe('Remove \u2068test\u2069');
   });

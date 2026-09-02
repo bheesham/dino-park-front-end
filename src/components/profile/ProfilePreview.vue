@@ -71,11 +71,11 @@
 import CompanyMixin from '@/components/_mixins/CompanyMixin.vue';
 import ContactMe from '@/components/ui/ContactMe.vue';
 import UserPicture from '@/components/ui/UserPicture.vue';
+import Icon from '@/components/ui/Icon.vue';
 import ProfileDescription from './ProfileDescription.vue';
 import ProfileName from './ProfileName.vue';
 import ProfileTitle from './ProfileTitle.vue';
 import ProfileTeamLocation from './ProfileTeamLocation.vue';
-import Icon from '@/components/ui/Icon.vue';
 
 export default {
   mixins: [CompanyMixin],

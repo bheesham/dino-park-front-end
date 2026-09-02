@@ -41,7 +41,8 @@ export default {
     query() {
       if (this.type === 'searchTag') {
         return `tags:"${this.tag}"`;
-      } else if (this.type === 'searchLanguage') {
+      }
+      if (this.type === 'searchLanguage') {
         return `languages:"${this.tag}"`;
       }
     },

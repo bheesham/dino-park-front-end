@@ -14,7 +14,7 @@ const defaultOptions = {
   numResults: 20,
   next: null,
 };
-const getDefaultOptions = () => Object.assign({}, defaultOptions);
+const getDefaultOptions = () => ({ ...defaultOptions });
 
 export default {
   async mounted() {
